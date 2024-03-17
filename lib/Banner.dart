@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
+
+
+void main(){
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,30 +36,18 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+
 class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text("AIT-LAHCEN REDOUAN",style: TextStyle(color:Colors.white),
-        ),
-        actions: [
-          IconButton(
-              onPressed:(){
-                ScaffoldMessenger
-                    .of(context)
-                    .showSnackBar(SnackBar(content: Text("OVER-POWER")));
-              }
-              , icon:Icon(Icons.add_alert),iconSize: 50,color: Colors.white,
-
-          )
-        ],
+        title: const Text("HELLO"),
       ),
 
-      body: const Center(
-        child: Text("TARNISHED",style: TextStyle(fontSize: 22.0,color: Colors.green),),
+      body: Center(
+        child: const Text("YO")
       ),
     );
   }

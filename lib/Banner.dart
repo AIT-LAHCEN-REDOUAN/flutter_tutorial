@@ -47,8 +47,38 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       body: Center(
-        child: const Text("YO")
+        child: Container(
+            padding: const EdgeInsets.all(20),
+            child: ElevatedButton(
+              child: const Text("Click me") ,
+              onPressed: (){
+                 ScaffoldMessenger.of(context).showMaterialBanner(
+                    const MaterialBanner(content:const Text("Material Banner"),
+                    leading: Icon(Icons.agriculture_outlined),
+                      backgroundColor: Colors.green,
+                      actions: <Widget>[
+                        TextButton(onPressed: null, child: const Text("DISMISS"),
+                        )
+                      ],
+                    )
+                 );
+              },
+            )
+        )
       ),
+
+        endDrawer:
+
+        Banner(message: "Banner",location: BannerLocation.bottomEnd,child:
+        Container(
+          height: 200,
+          width: 200,
+          color: Colors.amberAccent,
+          alignment: Alignment.center,
+          child: const Text("TARNISHED"),
+        ),)
+
+
     );
   }
 }

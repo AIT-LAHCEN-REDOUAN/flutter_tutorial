@@ -55,9 +55,29 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 30.0 , fontStyle: FontStyle.italic),) ,
           ) ,
           Center(
-            child: Text("my Tab 2"),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 30,),
+                const Text("Please Select Yes Or No"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+
+                  ]
+
+                )
+              ],
+            ),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.amberAccent,
+        hoverColor: Colors.black,
+        backgroundColor: Colors.lightGreen,
+        child: Icon(Icons.add),
+        onPressed: (){},
       ),
     ));
   }

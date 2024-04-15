@@ -49,8 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: ListView(
           children: [
-            Center(
-              child: Text("Employe",style: TextStyle(
+            const Center(
+              child:  Text("Employe",style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold)
                 ,),
@@ -59,11 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
             SizedBox(height: 20),
             
-            DataTable(columns: [
+            DataTable(columns: const [
               DataColumn(label: Text("id")),
               DataColumn(label: Text("Name")),
               DataColumn(label: Text("Age"))
-            ], rows: [
+            ], rows: const [
                  DataRow(cells: [
                    DataCell(Text("1")),
                    DataCell(Text("AMINE")),
